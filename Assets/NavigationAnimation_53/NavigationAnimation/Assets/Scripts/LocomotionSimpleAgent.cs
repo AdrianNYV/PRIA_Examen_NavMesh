@@ -40,20 +40,9 @@ public class LocomotionSimpleAgent : MonoBehaviour {
 		LookAt lookAt = GetComponent<LookAt> ();
 		if (lookAt)
 			lookAt.lookAtTargetPosition = agent.steeringTarget + transform.forward;
-
-//		// Pull character towards agent
-//		if (worldDeltaPosition.magnitude > agent.radius)
-//			transform.position = agent.nextPosition - 0.9f*worldDeltaPosition;
-
-//		// Pull agent towards character
-//		if (worldDeltaPosition.magnitude > agent.radius)
-//			agent.nextPosition = transform.position + 0.9f*worldDeltaPosition;
 	}
 
 	void OnAnimatorMove () {
-		// Update postion to agent position
-//		transform.position = agent.nextPosition;
-
 		// Update position based on animation movement using navigation surface height
 		Vector3 position = anim.rootPosition;
 		position.y = agent.nextPosition.y;

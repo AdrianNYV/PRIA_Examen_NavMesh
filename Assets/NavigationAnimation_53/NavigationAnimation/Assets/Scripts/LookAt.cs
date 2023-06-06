@@ -1,5 +1,4 @@
-﻿// LookAt.cs
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
 
 [RequireComponent (typeof (Animator))]
